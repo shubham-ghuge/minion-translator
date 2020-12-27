@@ -18,4 +18,5 @@ function translate() {
 }
 function errorHandler(error) {
     console.log('error is', error)
+    alert('Limit Reached')
 }
