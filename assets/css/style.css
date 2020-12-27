@@ -4,10 +4,11 @@
 }
 :root{
     font-family: 'Bangers', cursive!important;
+    --primary-color:#fdec00;
 }
 body{
     background-color: #030303;
-    color: #ffd500;
+    color: var(--primary-color);
     height: 100vh;
     width: 100vw;
     display: flex;
@@ -23,11 +24,12 @@ img{
 }
 h1{
     margin: 1rem 0;
+    letter-spacing: 2px;
 }
 button{
     font-family: 'Bangers', cursive;
     padding: .5rem 1rem;
-    border: 2px solid #ffd500;
+    border: 2px solid var(--primary-color);
     border-radius: 5px;
     background-color: #030303;
     color: #fff;
@@ -39,21 +41,34 @@ button{
     cursor: pointer;
 }
 button:hover,button:focus{
+    outline: none;
     transition: all .4s ease-in;
-    background-color: #ffd500;
+    background-color: var(--primary-color);
     color: #030303;
 }
 input,textarea{
+    border-radius: 5px;
     font-family: 'Bangers', cursive!important;
     border: 2px solid #fff;
     background-color: transparent;
     resize: none;
     padding: 1rem;
     width: 80vw;
-    font-weight: 700;
-    color: #ffd500;
+    color: var(--primary-color);
 }
 input:focus,textarea:active,input:focus,textarea:focus{
     outline: none;
-    border: 2px solid #ffd500;
+    border: 2px solid var(--primary-color);
+}
+textarea::placeholder{
+    text-align: center;
+    font-size: 1.5rem;
+}
+@media all and (min-width:768px){
+    img{
+        height: 25vh;
+    }
+    input,textarea{
+        width: 50vw;
+    }
 }
